@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" role="img" aria-labelledby="title desc">
+  <title id="title">Metro Spare Mart</title>
+  <desc id="desc">Metro Spare Mart logo</desc>
+  <rect width="520" height="220" rx="28" fill="#020617"/>
+  <path d="M74 126h268l28 26h47l-28-47c-7-12-20-20-34-20h-70l-30-36H142c-17 0-32 10-38 25l-30 52Z" fill="#0e7490"/>
+  <path d="M132 73h107l23 28H111l11-18c2-6 4-10 10-10Z" fill="#67e8f9"/>
+  <path d="M286 101h68c7 0 13 4 17 10l8 15h-67l-26-25Z" fill="#67e8f9"/>
+  <circle cx="142" cy="153" r="29" fill="#0f172a" stroke="#e2e8f0" stroke-width="10"/>
+  <circle cx="352" cy="153" r="29" fill="#0f172a" stroke="#e2e8f0" stroke-width="10"/>
+  <circle cx="142" cy="153" r="9" fill="#06b6d4"/>
+  <circle cx="352" cy="153" r="9" fill="#06b6d4"/>
+  <text x="62" y="42" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" letter-spacing="1">METRO SPARE MART</text>
+  <text x="66" y="198" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">VEHICLE PARTS</text>
+</svg>

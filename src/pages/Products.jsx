@@ -97,10 +97,6 @@ export default function Products() {
     };
   }, [category, type]);
 
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [q, category, type]);
-
   const filtered = useMemo(() => {
     const s = q.trim().toLowerCase();
     if (!s) return products;
@@ -112,11 +108,12 @@ export default function Products() {
   }, [products, q]);
 
   const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+  const effectivePage = Math.min(currentPage, totalPages || 1);
 
   const paginatedProducts = useMemo(() => {
-    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    const start = (effectivePage - 1) * ITEMS_PER_PAGE;
     return filtered.slice(start, start + ITEMS_PER_PAGE);
-  }, [filtered, currentPage]);
+  }, [filtered, effectivePage]);
 
   const handlePageChange = (newPage) => {
     const next = Math.max(1, Math.min(newPage, totalPages || 1));
@@ -157,7 +154,10 @@ export default function Products() {
             <label className="sr-only">Search products</label>
             <input
               value={q}
-              onChange={(e) => setQ(e.target.value)}
+              onChange={(e) => {
+                setQ(e.target.value);
+                setCurrentPage(1);
+              }}
               placeholder="Search spare parts..."
               className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-100 outline-none backdrop-blur transition placeholder:text-slate-500 focus:border-cyan-500/50 focus:ring-4 focus:ring-cyan-500/10"
             />
@@ -238,7 +238,7 @@ export default function Products() {
               {totalPages > 1 && (
                 <Pagination
                   totalPages={totalPages}
-                  currentPage={currentPage}
+                  currentPage={effectivePage}
                   onChange={handlePageChange}
                 />
               )}

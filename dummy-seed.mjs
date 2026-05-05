@@ -22,7 +22,7 @@ const RAW_PRODUCTS = [
   {
     title: "Synthetic Engine Oil 5W-30",
     description: "Premium synthetic engine oil designed to offer ultimate performance and protection.",
-    price: 34.99,
+    price: 1299,
     categories: ["engine", "fluids", "service"],
     type: "Filters & Fluids",
     image_url: "/products/engine_oil.png",
@@ -30,7 +30,7 @@ const RAW_PRODUCTS = [
   {
     title: "Ceramic Front Brake Pads",
     description: "Low-dust, noise-free ceramic brake pads offering exceptional stopping power.",
-    price: 45.00,
+    price: 1799,
     categories: ["brakes", "wheels", "safety"],
     type: "Brake System",
     image_url: "/products/brake_pads.png",
@@ -38,7 +38,7 @@ const RAW_PRODUCTS = [
   {
     title: "Heavy Duty Car Battery 12V",
     description: "Reliable, maintenance-free 12V automotive battery for all weather conditions.",
-    price: 110.00,
+    price: 4899,
     categories: ["electrical", "engine"],
     type: "Electrical",
     image_url: "/products/car_battery.png",
@@ -46,7 +46,7 @@ const RAW_PRODUCTS = [
   {
     title: "All-Season Tire 195/65 R15",
     description: "Durable all-season tire providing excellent grip in wet and dry conditions.",
-    price: 85.50,
+    price: 3499,
     categories: ["wheels", "exterior"],
     type: "Tires & Wheels",
     image_url: "/products/car_tire.png",
@@ -54,7 +54,7 @@ const RAW_PRODUCTS = [
   {
     title: "Premium Oil Filter",
     description: "High-efficiency oil filter trapping 99% of harmful engine contaminants.",
-    price: 12.99,
+    price: 249,
     categories: ["filters", "engine", "service"],
     type: "Filters & Fluids",
     image_url: "/products/oil_filter.png",
@@ -62,7 +62,7 @@ const RAW_PRODUCTS = [
   {
     title: "Engine Timing Belt Kit",
     description: "Complete timing belt replacement kit including tensioners and water pump.",
-    price: 135.00,
+    price: 3299,
     categories: ["engine", "transmission"],
     type: "Engine Components",
     image_url: "/products/timing_belt.png",
@@ -70,7 +70,7 @@ const RAW_PRODUCTS = [
   {
     title: "Halogen Headlight Bulb H7",
     description: "Bright white halogen headlight bulb for enhanced night visibility.",
-    price: 18.50,
+    price: 399,
     categories: ["lighting", "electrical", "exterior"],
     type: "Body & Lighting",
     image_url: "/products/headlight_bulb.png",
@@ -78,7 +78,7 @@ const RAW_PRODUCTS = [
   {
     title: "Performance Spark Plug Set",
     description: "Set of 4 iridium spark plugs for better fuel efficiency and smoother acceleration.",
-    price: 28.00,
+    price: 899,
     categories: ["engine", "electrical"],
     type: "Engine Components",
     image_url: "/products/spark_plugs.png",
@@ -86,7 +86,7 @@ const RAW_PRODUCTS = [
   {
     title: "Front Suspension Strut",
     description: "Gas-charged front suspension strut for improved ride comfort and handling.",
-    price: 95.00,
+    price: 2899,
     categories: ["suspension", "wheels"],
     type: "Suspension",
     image_url: "/products/suspension_strut.png",
@@ -94,7 +94,7 @@ const RAW_PRODUCTS = [
   {
     title: "Engine Coolant / Antifreeze",
     description: "Long-life engine coolant providing protection against freezing and overheating.",
-    price: 22.99,
+    price: 449,
     categories: ["fluids", "cooling", "service"],
     type: "Cooling System",
     image_url: "/products/engine_coolant.png",
@@ -102,7 +102,7 @@ const RAW_PRODUCTS = [
   {
     title: "Cabin Air Filter",
     description: "Activated carbon cabin air filter blocking dust, pollen, and exhaust odors.",
-    price: 15.50,
+    price: 299,
     categories: ["filters", "interior"],
     type: "Filters & Fluids",
     image_url: "/products/cabin_filter.png",
@@ -110,7 +110,7 @@ const RAW_PRODUCTS = [
   {
     title: "Windshield Wiper Blades 22\"",
     description: "Silicone wiper blades offering streak-free clearing in heavy rain.",
-    price: 24.00,
+    price: 399,
     categories: ["exterior", "safety"],
     type: "Interior Accessories",
     image_url: "/products/wiper_blades.png",
@@ -118,7 +118,7 @@ const RAW_PRODUCTS = [
   {
     title: "Brake Disc Rotor",
     description: "Vented brake disc rotor designed to prevent brake fade and warping.",
-    price: 65.00,
+    price: 1599,
     categories: ["brakes", "wheels"],
     type: "Brake System",
     image_url: "/products/brake_rotor.png",
@@ -126,7 +126,7 @@ const RAW_PRODUCTS = [
   {
     title: "Ignition Coil Pack",
     description: "High-voltage ignition coil pack ensuring reliable engine starts.",
-    price: 48.00,
+    price: 1399,
     categories: ["electrical", "engine"],
     type: "Electrical",
     image_url: "/products/ignition_coil.png",
@@ -134,7 +134,7 @@ const RAW_PRODUCTS = [
   {
     title: "Alternator 12V 90A",
     description: "High-output alternator for consistent battery charging and electrical supply.",
-    price: 145.00,
+    price: 4999,
     categories: ["electrical", "engine"],
     type: "Electrical",
     image_url: "/products/alternator.png",
@@ -142,7 +142,7 @@ const RAW_PRODUCTS = [
   {
     title: "Starter Motor Assembly",
     description: "Heavy-duty starter motor providing reliable cranking power in all temperatures.",
-    price: 125.00,
+    price: 4299,
     categories: ["electrical", "engine"],
     type: "Electrical",
     image_url: "/products/starter_motor.png",
@@ -150,7 +150,7 @@ const RAW_PRODUCTS = [
   {
     title: "Transmission Fluid ATF 1L",
     description: "Advanced automatic transmission fluid for smooth shifting and wear protection.",
-    price: 14.50,
+    price: 349,
     categories: ["fluids", "transmission", "service"],
     type: "Filters & Fluids",
     image_url: "/products/transmission_fluid.png",
@@ -158,7 +158,7 @@ const RAW_PRODUCTS = [
   {
     title: "Radiator Cooling Fan",
     description: "Electric radiator cooling fan assembly to prevent engine overheating.",
-    price: 75.00,
+    price: 2499,
     categories: ["cooling", "engine", "electrical"],
     type: "Cooling System",
     image_url: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=800&auto=format&fit=crop",
@@ -166,7 +166,7 @@ const RAW_PRODUCTS = [
   {
     title: "Exhaust Muffler",
     description: "Aluminized steel exhaust muffler reducing engine noise and improving flow.",
-    price: 88.00,
+    price: 3199,
     categories: ["exhaust", "engine"],
     type: "Engine Components",
     image_url: "https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=800&auto=format&fit=crop",
@@ -174,7 +174,7 @@ const RAW_PRODUCTS = [
   {
     title: "Premium Car Floor Mats",
     description: "Set of 4 all-weather rubber floor mats protecting your vehicle's interior.",
-    price: 35.00,
+    price: 699,
     categories: ["interior", "accessories"],
     type: "Interior Accessories",
     image_url: "https://images.unsplash.com/photo-1606004921674-8b63fc3ff826?q=80&w=800&auto=format&fit=crop",

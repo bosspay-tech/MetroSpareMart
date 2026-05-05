@@ -1,102 +1,87 @@
-// Footer.jsx (dark electronics theme)
 import { Link } from "react-router-dom";
+import {
+  BUSINESS,
+  BUSINESS_EMAIL_HREF,
+  BUSINESS_PHONE_HREF,
+} from "../config/business";
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-white/10 bg-slate-950 text-slate-100">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        {/* Top */}
-        <div className="grid gap-10 lg:grid-cols-12">
-          {/* Brand */}
-          <div className="lg:col-span-4">
+      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+        <div className="grid gap-8 lg:grid-cols-12">
+          <div className="lg:col-span-5">
             <Link
               to="/"
-              className="inline-flex items-center gap-3 rounded-2xl px-2 py-1 font-extrabold tracking-tight text-white hover:bg-white/5"
+              className="inline-flex items-center gap-3 rounded-lg px-1 py-1 font-extrabold tracking-tight text-white hover:bg-white/5"
               aria-label="Go to homepage"
             >
-              <img src="/metro_logo.svg" alt="logo" className="h-20 w-26" />
-              <div className="leading-tight">
-                <div className="text-xs font-semibold text-slate-300">
-                  Brakes • Engine • Filters • Lighting
-                </div>
-              </div>
+              <img
+                src="/Metro Traders Logo.png"
+                alt={`${BUSINESS.name} logo`}
+                className="h-14 w-auto rounded-md object-contain"
+              />
+              <span className="text-lg font-black">{BUSINESS.name}</span>
             </Link>
 
             <p className="mt-4 max-w-sm text-sm leading-6 text-slate-300">
-              Genuine vehicle spare parts, secure packing, and quick dispatch.
-              Built for daily repairs, workshops, and fleet maintenance.
+              Vehicle spare parts, workshop essentials, GST billing, secure
+              packing, and dependable support from Ahmedabad.
             </p>
-            <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-              <div className="text-xs font-semibold text-white">
+
+            <div className="mt-5 rounded-lg border border-white/10 bg-white/5 p-4">
+              <div className="text-xs font-semibold uppercase tracking-widest text-slate-400">
                 Registered Office
               </div>
-
-              <div className="mt-2 text-xs text-slate-300 leading-5">
-                METRO SPARE MART
+              <address className="mt-2 not-italic text-sm leading-6 text-slate-300">
+                <strong className="text-white">{BUSINESS.name}</strong>
                 <br />
-                Demo Market Road, Auto Nagar
-                <br />
-                Hyderabad, Telangana - 500001
-                <br />
-                Near Metro Service Lane
-              </div>
+                {BUSINESS.addressLines.map((line) => (
+                  <span key={line}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
+              </address>
 
-              <div className="mt-3 text-xs text-slate-300">
-                📞 +91 9000000000
+              <div className="mt-4 grid gap-2 text-sm text-slate-300">
+                <a
+                  href={BUSINESS_PHONE_HREF}
+                  className="font-semibold text-white hover:text-cyan-300"
+                >
+                  MOB: {BUSINESS.phone}
+                </a>
+                <a
+                  href={BUSINESS_EMAIL_HREF}
+                  className="break-words font-semibold text-white hover:text-cyan-300"
+                >
+                  Mail: {BUSINESS.email}
+                </a>
+                <span>GST: {BUSINESS.gst}</span>
+                <span>UDYAM REG: {BUSINESS.udyam}</span>
               </div>
-
-              <div className="mt-2 text-xs text-slate-300">
-                GST: 00ABCDE0000A1Z5
-              </div>
-
-              <div className="mt-1 text-xs text-slate-300">
-                CIN: U00000TG2026PTC000000
-              </div>
-            </div>
-
-            {/* Trust badges */}
-            <div className="mt-5 flex flex-wrap gap-2 text-xs text-slate-200">
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 backdrop-blur">
-                🔒 Secure payments
-              </span>
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 backdrop-blur">
-                ⚡ Fast dispatch
-              </span>
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 backdrop-blur">
-                🧰 Protective packing
-              </span>
             </div>
           </div>
 
-          {/* Link Columns */}
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-7">
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
               <div>
                 <h4 className="text-sm font-bold text-white">Shop</h4>
                 <ul className="mt-4 space-y-2.5 text-sm">
                   <li>
-                    <Link
-                      className="text-slate-300 hover:text-white"
-                      to="/products"
-                    >
+                    <Link className="text-slate-300 hover:text-white" to="/products">
                       All Products
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      className="text-slate-300 hover:text-white"
-                      to="/cart"
-                    >
+                    <Link className="text-slate-300 hover:text-white" to="/cart">
                       Cart
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      className="text-slate-300 hover:text-white"
-                      to="/orders"
-                    >
+                    <Link className="text-slate-300 hover:text-white" to="/orders">
                       Orders
                     </Link>
                   </li>
@@ -107,10 +92,12 @@ export default function Footer() {
                 <h4 className="text-sm font-bold text-white">Support</h4>
                 <ul className="mt-4 space-y-2.5 text-sm">
                   <li>
-                    <Link
-                      className="text-slate-300 hover:text-white"
-                      to="/shipping"
-                    >
+                    <Link className="text-slate-300 hover:text-white" to="/contact">
+                      Contact
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="text-slate-300 hover:text-white" to="/shipping">
                       Shipping Policy
                     </Link>
                   </li>
@@ -123,23 +110,16 @@ export default function Footer() {
                     </Link>
                   </li>
                 </ul>
-
-                <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-                  <div className="text-xs font-semibold text-white">
-                    Customer care
-                  </div>
-                  <div className="mt-1 text-xs text-slate-300">
-                    Email: support@metrosparemart.com
-                  </div>
-                  <div className="mt-1 text-xs text-slate-300">
-                    Hours: Mon–Sat • 10am–6pm
-                  </div>
-                </div>
               </div>
 
               <div>
                 <h4 className="text-sm font-bold text-white">Company</h4>
                 <ul className="mt-4 space-y-2.5 text-sm">
+                  <li>
+                    <Link className="text-slate-300 hover:text-white" to="/about">
+                      About Us
+                    </Link>
+                  </li>
                   <li>
                     <Link
                       className="text-slate-300 hover:text-white"
@@ -156,82 +136,49 @@ export default function Footer() {
                       Terms of Service
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      className="text-slate-300 hover:text-white"
-                      to="/contact"
-                    >
-                      Contact
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-slate-300 hover:text-white"
-                      to="/about"
-                    >
-                      About Us
-                    </Link>
-                  </li>
                 </ul>
-
-                <div className="mt-5 flex flex-wrap gap-2 text-xs">
-                  <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-slate-200 backdrop-blur">
-                    ✅ Quality checked
-                  </span>
-                  <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-slate-200 backdrop-blur">
-                    🧾 GST invoice
-                  </span>
-                </div>
               </div>
             </div>
 
-            {/* Mini bar */}
-            <div className="mt-10 grid gap-3 sm:grid-cols-3">
+            <div className="mt-8 grid gap-3 sm:grid-cols-3">
               {[
-                { t: "Fast dispatch", d: "Within 24–48 hours" },
-                { t: "Secure packing", d: "Box + bubble wrap" },
-                { t: "Secure checkout", d: "UPI / Cards / Wallets" },
-              ].map((x) => (
+                { t: "GST invoice", d: "Business-ready billing" },
+                { t: "Fast dispatch", d: "Careful packing support" },
+                { t: "Verified stock", d: "Parts for regular service" },
+              ].map((item) => (
                 <div
-                  key={x.t}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur"
+                  key={item.t}
+                  className="rounded-lg border border-white/10 bg-white/5 p-4"
                 >
-                  <div className="text-sm font-semibold text-white">{x.t}</div>
-                  <div className="mt-1 text-xs text-slate-300">{x.d}</div>
+                  <div className="text-sm font-semibold text-white">{item.t}</div>
+                  <div className="mt-1 text-xs text-slate-300">{item.d}</div>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Bottom */}
         <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-slate-400">
-            © {year} Metro Spare Mart. All rights reserved.
+            Copyright {year} {BUSINESS.name}. All rights reserved.
           </p>
 
           <div className="flex flex-wrap items-center gap-3 text-xs text-slate-300">
             <Link className="hover:text-white" to="/privacy-policy">
               Privacy
             </Link>
-            <span className="text-slate-700">•</span>
+            <span className="text-slate-700">|</span>
             <Link className="hover:text-white" to="/terms-of-service">
               Terms
             </Link>
-            <span className="text-slate-700">•</span>
+            <span className="text-slate-700">|</span>
             <Link className="hover:text-white" to="/returns-refunds">
               Returns
             </Link>
-            <span className="text-slate-700">•</span>
+            <span className="text-slate-700">|</span>
             <Link className="hover:text-white" to="/shipping">
               Shipping
             </Link>
-          </div>
-
-          <div className="flex items-center gap-2 text-xs text-slate-300">
-            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 backdrop-blur">
-              Visa / Mastercard / UPI
-            </span>
           </div>
         </div>
       </div>

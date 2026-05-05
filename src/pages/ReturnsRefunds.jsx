@@ -96,7 +96,7 @@ export default function ReturnsRefunds() {
               <li>
                 Contact support at{" "}
                 <span className="font-semibold text-cyan-300">
-                  support@metrosparemart.com
+                  sales@metrospareMart.com
                 </span>{" "}
                 with your order ID.
               </li>
@@ -153,7 +153,7 @@ export default function ReturnsRefunds() {
             <p className="mt-2 text-sm leading-6 text-slate-300">
               For any questions, reach us at{" "}
               <span className="font-semibold text-cyan-300">
-                support@metrosparemart.com
+                sales@metrospareMart.com
               </span>
               .
             </p>

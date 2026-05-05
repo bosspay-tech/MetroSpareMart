@@ -31,12 +31,7 @@ export default function MyOrders() {
 
   useEffect(() => {
     if (authLoading) return;
-
-    if (!user) {
-      setOrders([]);
-      setLoading(false);
-      return;
-    }
+    if (!user) return;
 
     let alive = true;
 
